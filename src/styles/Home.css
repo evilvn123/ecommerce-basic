@@ -1,0 +1,10 @@
+.home {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.banner {
+  width: 80%;
+  height: 300px;
+}
