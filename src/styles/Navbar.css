@@ -1,4 +1,6 @@
 .navbar {
+  position: sticky;
+  top: 0;
   background-color: #9966ff;
   display: flex;
   align-items: center;
