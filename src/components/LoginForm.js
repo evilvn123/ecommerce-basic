@@ -1,20 +1,45 @@
-import React from "react";
-import "../styles/LoginForm.css"
+import React, { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+import "../styles/LoginForm.css";
 
 const LoginForm = () => {
+  // const navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-  //Tạo 2 state về username và password
-  // 2 hàm onChangeUserName và onChangePassword 
-  // (dùng setState của 2 state trên với giá trị là event.target.value)
-  // dùng onClick tại 2 ô input
+  const onChangeUserName = (event) => {
+    setUsername(event.target.value);
+  };
+  const onChangePassword = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const login = () => {
+    if (username === "user" && password === "123456") {
+      console.log("Login");
+      // navigate("/");
+    }
+  };
 
   return (
     <div className="formContainer">
       <h2 className="title">Login to page</h2>
       <form className="form">
-        <input name="username" type={"text"} placeholder="Email or Username" />
-        <input name="password" type={"password"} placeholder="Password" />
-        <button>Login</button>
+        <input
+          name="username"
+          value={username}
+          type={"text"}
+          placeholder="Email or Username"
+          onChange={onChangeUserName}
+        />
+        <input
+          name="password"
+          value={password}
+          type={"password"}
+          placeholder="Password"
+          onChange={onChangePassword}
+        />
+        <button onClick={login}>Login</button>
       </form>
     </div>
   );
