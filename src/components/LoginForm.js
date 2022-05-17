@@ -4,7 +4,8 @@ import "../styles/LoginForm.css"
 const LoginForm = () => {
 
   //Tạo 2 state về username và password
-  // 2 hàm onChangeUserName và onChangePassword
+  // 2 hàm onChangeUserName và onChangePassword 
+  // (dùng setState của 2 state trên với giá trị là event.target.value)
   // dùng onClick tại 2 ô input
 
   return (
