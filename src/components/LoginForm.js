@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../styles/LoginForm.css";
 
 const LoginForm = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,8 +16,7 @@ const LoginForm = () => {
 
   const login = () => {
     if (username === "user" && password === "123456") {
-      console.log("Login");
-      // navigate("/");
+      navigate("/");
     }
   };
 
