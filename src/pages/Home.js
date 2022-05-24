@@ -7,8 +7,10 @@ const Home = () => {
   return (
     <div className="home">
       <img className="banner" src={banner} alt="banner" />
-      <div>
-        <h3>Lastest Product</h3>
+      <h3>Lastest Product</h3>
+      <div className="lastest">
+        <ProductCard />
+        <ProductCard />
         <ProductCard />
       </div>
     </div>

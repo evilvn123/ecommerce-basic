@@ -1,6 +1,6 @@
 .footer {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  bottom: -300px;
   width: 100vw;
   background-color: #9966ff;
   color: white;
