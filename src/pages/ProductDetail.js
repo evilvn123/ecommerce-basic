@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "../styles/ProductCard.css";
 
-const ProductCard = ({}) => {
+const ProductDetail = ({}) => {
   const product = {
     images: [
       "http://placekitten.com/400/252",
@@ -16,15 +14,7 @@ const ProductCard = ({}) => {
     sizes: ["S", "M", "L"],
     colors: ["black", "white", "yellow"],
   };
-  return (
-    <div className="productCard">
-      <Link to={"/productDetail"}>
-        <img className="image" src={product.images[0]} alt={product.name} />
-        <span className="name">{product.name}</span>
-        <span className="price">${product.price}</span>
-      </Link>
-    </div>
-  );
+  return <div>Detail</div>;
 };
 
-export default ProductCard;
+export default ProductDetail;
