@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import products from "../__mockup/product";
+import "../styles/ProductDetail.css";
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -37,7 +38,7 @@ const ProductDetail = () => {
           <div className="color">
             {currentProduct.colors.map((item) => (
               <span key={item}>
-                <input id={item} name="size" type={"radio"} value={item} />
+                <input id={item} name="color" type={"radio"} value={item} />
                 <label htmlFor={item}>
                   <div
                     style={{
@@ -51,6 +52,7 @@ const ProductDetail = () => {
               </span>
             ))}
           </div>
+          <button>Thêm vào giỏ</button>
         </div>
       </div>
     </div>
