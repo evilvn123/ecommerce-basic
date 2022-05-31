@@ -1,20 +1,57 @@
 import React from "react";
+import products from "../__mockup/product";
 
 const ProductDetail = ({}) => {
-  const product = {
-    images: [
-      "http://placekitten.com/400/252",
-      "http://placekitten.com/200/126",
-      "http://placekitten.com/200/126",
-    ],
-    name: "Kitten",
-    description:
-      "Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.",
-    price: "180",
-    sizes: ["S", "M", "L"],
-    colors: ["black", "white", "yellow"],
-  };
-  return <div>Detail</div>;
+  const id = 1;
+  const currentProduct = products[id];
+  return (
+    <div className="productDetail">
+      <div className="container">
+        <div className="images">
+          <img
+            className="main-image"
+            src={currentProduct.images[0]}
+            alt={currentProduct.name}
+          />
+          <div className="list-images">
+            {currentProduct.images.map((item, index) => (
+              <img key={index} src={item} alt={item} />
+            ))}
+          </div>
+        </div>
+        <div className="information">
+          <h4>{currentProduct.name}</h4>
+          <p>{currentProduct.description}</p>
+          <p>{currentProduct.price}</p>
+          <div className="size">
+            {currentProduct.sizes.map((item) => (
+              <span key={item}>
+                <input id={item} name="size" type={"radio"} value={item} />
+                <label htmlFor={item}>{item}</label>
+              </span>
+            ))}
+          </div>
+          <div className="color">
+            {currentProduct.colors.map((item) => (
+              <span key={item}>
+                <input id={item} name="size" type={"radio"} value={item} />
+                <label htmlFor={item}>
+                  <div
+                    style={{
+                      backgroundColor: item,
+                      width: "10px",
+                      height: "10px",
+                      display: "inline-block",
+                    }}
+                  ></div>
+                </label>
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ProductDetail;
