@@ -18,7 +18,6 @@ const products = [
     images: [
       "http://placekitten.com/400/126",
       "http://placekitten.com/200/126",
-      "http://placekitten.com/200/126",
     ],
     name: "Kitten",
     description:

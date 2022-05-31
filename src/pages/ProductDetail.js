@@ -1,9 +1,12 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import products from "../__mockup/product";
 
-const ProductDetail = ({}) => {
-  const id = 1;
-  const currentProduct = products[id];
+const ProductDetail = () => {
+  const { productId } = useParams();
+  const currentProduct = products.find(
+    (item) => item.id === parseInt(productId)
+  );
   return (
     <div className="productDetail">
       <div className="container">
