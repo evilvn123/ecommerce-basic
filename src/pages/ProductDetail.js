@@ -21,16 +21,33 @@ const ProductDetail = () => {
   };
 
   const addToCart = () => {
-    localStorage.setItem(
-      "cart",
-      JSON.stringify({
+    const carts = JSON.parse(localStorage.getItem("cart")) || [];
+    // Lấy cart trong local storage, nếu không tồn tại thì gán carts = []
+
+    //B1: tìm trong mảng xem có sản phẩm này hay chưa
+    // cùng size, cùng màu, cùng id => cùng sản phẩm
+    const product = carts.find(
+      (item) =>
+        item.id === currentProduct.id &&
+        item.color === color &&
+        item.size === size
+    );
+
+    //B2: Nếu chưa có, thì push vào cuối mảng
+    if (product === undefined) {
+      carts.push({
         id: currentProduct.id,
         name: currentProduct.name,
         size: size,
         color: color,
-      })
-    );
-    // const item = JSON.parse(localStorage.getItem("cart"));
+        quantity: 1,
+      });
+    } else {
+      product.quantity += 1;
+    }
+    //B3: Nếu có rồi thì tăng số lượng lên 1
+
+    localStorage.setItem("cart", JSON.stringify(carts));
   };
   return (
     <div className="productDetail">
