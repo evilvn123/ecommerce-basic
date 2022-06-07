@@ -13,7 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product">
-          <Route path=":productId" element={<ProductDetail />} />
+          <Route path=":productId" element={<ProductDetail />} /> 
+          {/* slug */}
         </Route>
         <Route path="/signin" element={<Signin />} />
       </Routes>

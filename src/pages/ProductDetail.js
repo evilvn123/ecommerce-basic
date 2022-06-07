@@ -8,6 +8,10 @@ const ProductDetail = () => {
   const currentProduct = products.find(
     (item) => item.id === parseInt(productId)
   );
+
+  const addToCart = () => {
+    localStorage.setItem("cart", JSON.stringify(currentProduct));
+  };
   return (
     <div className="productDetail">
       <div className="container">
@@ -43,16 +47,17 @@ const ProductDetail = () => {
                   <div
                     style={{
                       backgroundColor: item,
-                      width: "10px",
-                      height: "10px",
+                      width: "15px",
+                      height: "15px",
                       display: "inline-block",
+                      border: "solid 1px black",
                     }}
                   ></div>
                 </label>
               </span>
             ))}
           </div>
-          <button>Thêm vào giỏ</button>
+          <button onClick={addToCart}>Thêm vào giỏ</button>
         </div>
       </div>
     </div>
