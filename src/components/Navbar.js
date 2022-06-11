@@ -1,4 +1,4 @@
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCartPlus, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -15,6 +15,11 @@ const Navbar = () => {
         </li>
         <li className="menu-item pre-last">
           <Link to="/product">Product</Link>
+        </li>
+        <li className="menu-item">
+          <Link to="/cart">
+            <FontAwesomeIcon icon={faCartPlus} />
+          </Link>
         </li>
         <li className="menu-item">
           <Link to="/signin">
