@@ -37,7 +37,9 @@ const ProductDetail = () => {
     if (product === undefined) {
       carts.push({
         id: currentProduct.id,
+        image: currentProduct.images[0],
         name: currentProduct.name,
+        price: currentProduct.price,
         size: size,
         color: color,
         quantity: 1,

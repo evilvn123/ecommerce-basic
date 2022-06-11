@@ -6,7 +6,7 @@ const products = [
       "http://placekitten.com/200/126",
       "http://placekitten.com/200/126",
     ],
-    name: "Kitten",
+    name: "Kitten 1",
     description:
       "Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.",
     price: "180",
@@ -19,7 +19,7 @@ const products = [
       "http://placekitten.com/400/126",
       "http://placekitten.com/200/126",
     ],
-    name: "Kitten",
+    name: "Kitten 2",
     description:
       "Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.",
     price: "180",
