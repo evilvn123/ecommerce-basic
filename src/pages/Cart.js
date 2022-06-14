@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CartItem from "../components/CartItem";
+import "../styles/Cart.css"
 
 const Cart = ({}) => {
   const [carts, setCarts] = useState(
@@ -7,7 +8,7 @@ const Cart = ({}) => {
   );
 
   return (
-    <div>
+    <div className="cart">
       {carts.map((item, index) => (
         <CartItem key={"index: " + index + ", id: " + item.id} item={item} />
       ))}
