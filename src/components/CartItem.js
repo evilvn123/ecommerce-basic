@@ -28,10 +28,23 @@ const CartItem = ({ item }) => {
   return (
     <div className="item">
       <img className="image" src={item.image} alt="" />
-      <span className="name">{item.name}</span>
+      <div>
+        <p className="name">Sản phẩm: {item.name}</p>
+        <p className="name">size: {item.size}</p>
+        <p className="name">
+          color:{" "}
+          <div
+            style={{
+              backgroundColor: item.color,
+              width: "15px",
+              height: "15px",
+              display: "inline-block",
+              border: "solid 1px black",
+            }}
+          ></div>
+        </p>
+      </div>
       <span className="price">{+item.price} VND</span>
-
-      {/* <span className="quantity">{item.quantity}</span> */}
       <div className="quantity">
         <button onClick={() => onChangeInput(quantity - 1)}>-</button>
         <input
