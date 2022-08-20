@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product">
+          {/* slug */}
           <Route path=":productId" element={<ProductDetail />} /> 
         </Route>
         <Route path="/signin" element={<Signin />} />

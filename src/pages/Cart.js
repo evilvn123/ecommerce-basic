@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CartItem from "../components/CartItem";
 import "../styles/Cart.css";
 
-const Cart = ({}) => {
+const Cart = () => {
   const [carts, setCarts] = useState(
     JSON.parse(localStorage.getItem("cart")) || []
   );
@@ -22,7 +22,6 @@ const Cart = ({}) => {
         <div className="header">
           <div className="price">Giá</div>
           <div className="quantity">Số lượng</div>
-
           <div className="total">Tổng tiền</div>
         </div>
       </div>
