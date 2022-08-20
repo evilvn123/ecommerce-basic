@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/CartItem.css";
 
-const CartItem = ({ item }) => {
+const CartItem = ({ item, setCarts }) => {
   const [quantity, setQuantity] = useState(item.quantity);
 
   const onChangeInput = (value) => {
@@ -23,6 +23,7 @@ const CartItem = ({ item }) => {
     product.quantity = quantity;
 
     localStorage.setItem("cart", JSON.stringify(carts));
+    setCarts(carts);
   }, [quantity]);
 
   return (
